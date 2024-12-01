@@ -6,20 +6,20 @@ $ pip install -U "huggingface_hub[cli]"
 
 
 ## Login
-First, create a token from [Hugging Face Settings](https://huggingface.co/settings/tokens) (Permission: write).
+First, create a token from [Hugging Face Settings](https://huggingface.co/settings/tokens) (Permission: write).  
 ```shell=
 $ huggingface-cli login
 ```
-* Add token as git credential?  --> n
+* Add token as git credential?  --> n  
 
 ---
 
-If you encounter `huggingface-cli: command not found` : [ref](https://blog.csdn.net/weixin_40959890/article/details/129819257)
+If you encounter `huggingface-cli: command not found` : [ref](https://blog.csdn.net/weixin_40959890/article/details/129819257)  
 ```shell=
 $ echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
 $ source ~/.bashrc
 ```
-Then retry `huggingface-cli login`.  It should work now.
+Then retry `huggingface-cli login`.  It should work now.  
 
 ## Logout
 ```shell=
@@ -32,8 +32,8 @@ $ huggingface-cli logout
 ```shell=
 $ huggingface-cli download {repo ID} --local-dir {local path}
 ```
-`--include`:  e.g., `--include "*.json" "*.safetensors"`
-`--exclude`:  e.g., `--exclude "*.bin"`
+`--include`:  e.g., `--include "*.json" "*.safetensors"`  
+`--exclude`:  e.g., `--exclude "*.bin"`  
 
 ### Download a single file
 ```shell=
