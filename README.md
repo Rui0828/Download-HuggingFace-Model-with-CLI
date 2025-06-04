@@ -21,21 +21,22 @@ $ source ~/.bashrc
 ```
 Then retry `huggingface-cli login`.  It should work now.  
 
-## Logout
-```shell=
-$ huggingface-cli logout
-```
-
 
 ## Download Model
 ### Download an entire repository
 ```shell=
 $ huggingface-cli download {repo ID} --local-dir {local path}
 ```
-`--include`:  e.g., `--include "*.json" "*.safetensors"`  
-`--exclude`:  e.g., `--exclude "*.bin"`  
+- Optional parameters:  
+    `--include`:  e.g., `--include "*.json" "*.safetensors"`  
+    `--exclude`:  e.g., `--exclude "*.bin"`  
 
 ### Download a single file
 ```shell=
 $ huggingface-cli download {repo ID} {file name} --local-dir {local path}
+```
+
+## Logout
+```shell=
+$ huggingface-cli logout
 ```
